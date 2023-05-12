@@ -2,14 +2,10 @@ export const createBoard = () => {
   const numberOfRows: number = 5;
 
   const rows: number[] = [];
-  const columns = [];
+  const board = [];
 
   for (let index: number = 0; index < numberOfRows; index++) {
     rows.push(0);
-    columns.push(rows);
+    board.push(rows);
   }
-
-  console.log(columns);
 };
-
-createBoard();
