@@ -1,4 +1,4 @@
-import { printBoard } from "./printBoard";
+import { printBoard } from "./printBoard.js";
 
 describe("Given a printBoard function", () => {
   describe("When it receives an array of arrays", () => {
