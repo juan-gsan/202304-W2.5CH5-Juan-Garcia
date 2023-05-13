@@ -1,7 +1,8 @@
-import { createBoard } from "./createRandomBoard";
+import { printBoard } from "./printBoard.js";
 
 export const countTokenStatus = () => {
-  const board = createBoard(3, 3);
+  const board = printBoard();
+
   let aliveTokens: number = 0;
 
   for (let y = 0; y < board.length; y++) {

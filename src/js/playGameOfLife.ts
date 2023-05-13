@@ -1,7 +1,7 @@
 import { countTokenStatus } from "./countTokenStatus.js";
-import { createBoard } from "./createRandomBoard";
+import { createRandomBoard } from "./createRandomBoard";
 export const playGameOfLife = () => {
-  const board = createBoard(3, 3);
+  const board = createRandomBoard(3, 3);
   for (let y = 0; y < board.length; y++) {
     for (let x = 0; x < board[y].length; x++) {
       if (board[y][x] === 1 && countTokenStatus(board) < 2) {
