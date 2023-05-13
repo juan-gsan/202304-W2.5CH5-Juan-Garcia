@@ -1,3 +1,3 @@
-import { createBoard } from "./createBoard.js";
+import { timer } from "./timer.js";
 
-createBoard(3, 3);
+timer();

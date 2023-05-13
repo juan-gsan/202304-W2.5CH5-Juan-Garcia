@@ -1,5 +1,5 @@
 import { countTokenStatus } from "./countTokenStatus.js";
-import { createBoard } from "./createBoard";
+import { createBoard } from "./createBoard.js";
 export const playGameOfLife = () => {
   const board = createBoard(3, 3);
   for (let y = 0; y < board.length; y++) {
