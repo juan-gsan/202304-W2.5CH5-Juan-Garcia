@@ -1,7 +1,7 @@
 import { countTokenStatus } from "./countTokenStatus.js";
-import { playFirstRound } from "./playFirstRound.js";
-
-export const playGameOfLife = (board = playFirstRound()) => {
+import { printBoard } from "./printBoard.js";
+export const playFirstRound = () => {
+  const board = printBoard();
   const aliveNeighbors = countTokenStatus(board);
 
   for (let y = 0; y < board.length; y++) {

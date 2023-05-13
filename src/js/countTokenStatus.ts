@@ -1,8 +1,4 @@
-import { printBoard } from "./printBoard.js";
-
-export const countTokenStatus = () => {
-  const consoleBoard = printBoard();
-  const board = 
+export const countTokenStatus = (board) => {
   let aliveTokens: number = 0;
 
   for (let y = 0; y < board.length; y++) {
