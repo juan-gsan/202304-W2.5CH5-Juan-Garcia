@@ -10,5 +10,5 @@ export const createBoard = (rows: number, columns: number) => {
     board.push(row);
   }
 
-  console.log(board);
+  return board;
 };

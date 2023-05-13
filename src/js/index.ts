@@ -1,3 +1,3 @@
 import { createBoard } from "./createBoard.js";
 
-createBoard(5, 5);
+createBoard(3, 3);
