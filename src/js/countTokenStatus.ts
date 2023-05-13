@@ -1,4 +1,4 @@
-import { createBoard } from "./createBoard.js";
+import { createBoard } from "./createRandomBoard";
 
 export const countTokenStatus = () => {
   const board = createBoard(3, 3);

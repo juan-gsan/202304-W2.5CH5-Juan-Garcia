@@ -1,5 +1,5 @@
-export const createBoard = (rows: number, columns: number) => {
-  const board = [];
+export const createRandomBoard = (rows: number, columns: number) => {
+  const randomBoard = [];
 
   for (let y = 0; y < rows; y++) {
     const row = [];
@@ -7,8 +7,8 @@ export const createBoard = (rows: number, columns: number) => {
       row.push(Math.round(Math.random()));
     }
 
-    board.push(row);
+    randomBoard.push(row);
   }
 
-  return board;
+  return randomBoard;
 };
