@@ -17,6 +17,7 @@ export const printBoard = () => {
     for (let x = 0; x < randomBoard[y].length; x++) {
       const boardToken = document.createElement("div");
       canvasBoard?.append(boardToken);
+
       if (randomBoard[y][x] === 0) {
         boardToken.setAttribute("class", "dead");
         boardToken.textContent = "X";
@@ -26,6 +27,8 @@ export const printBoard = () => {
         boardToken.setAttribute("class", "alive");
         boardToken.textContent = "O";
       }
+
+      boardToken.classList.add(y + "-" + x);
     }
   }
 

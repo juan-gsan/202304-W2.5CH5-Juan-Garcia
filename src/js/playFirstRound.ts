@@ -6,15 +6,13 @@ export const playFirstRound = () => {
 
   for (let y = 0; y < board.length; y++) {
     for (let x = 0; x < board[y].length; x++) {
-      if (board[1][1] === 1) {
+      if (board[y][x] === 1) {
         if (aliveNeighbors < 3 || aliveNeighbors > 4) {
-          board[1][1] = 0;
         }
       }
 
-      if (board[1][1] === 0) {
-        if (aliveNeighbors === 3) {
-          board[1][1] = 1;
+      if (board[y][x] === 0) {
+        if (aliveNeighbors === 4) {
         }
       }
     }

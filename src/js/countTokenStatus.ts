@@ -1,11 +1,23 @@
-export const countTokenStatus = (board) => {
-  let aliveTokens: number = 0;
+export const countTokenStatus = (board, row, column) => {
+  let aliveTokens = 0;
+  const y = Number(row);
+  const x = Number(column);
 
-  for (let y = 0; y < board.length; y++) {
-    for (let x = 0; x < board[y].length; x++) {
-      if (board[x][y] === 1) {
-        aliveTokens += 1;
-      }
+  if (y - 1 >= 0) {
+    if (board[y - 1][x] === 1) {
+      aliveTokens++;
+    }
+  }
+
+  if (y - 1 >= 0 && x - 1 >= 0) {
+    if (board[y - 1][x - 1] === 1) {
+      aliveTokens++;
+    }
+  }
+
+  if (y - 1 >= 0 && x + 1 < x) {
+    if (board[y - 1][x + 1] === 1) {
+      aliveTokens++;
     }
   }
 

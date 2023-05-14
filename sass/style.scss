@@ -1,0 +1,45 @@
+@use "./reset";
+@use "./global";
+
+.container {
+  min-height: 100vh;
+  margin: 2rem;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.header__subtitle {
+  margin-bottom: 3rem;
+}
+
+.main__board {
+  display: inline-grid;
+  width: 35%;
+  grid-template-columns: repeat(3, 1fr);
+  div {
+    font-size: 2rem;
+  }
+}
+
+.main__buttons--start,
+.main__buttons--stop,
+.main__buttons--reset {
+  background-color: white;
+  border: 2px solid lightgray;
+  margin: 2rem;
+  width: 5rem;
+  height: 2rem;
+  padding: 0.5rem;
+}
+
+.main__buttons--start:hover,
+.main__buttons--stop:hover,
+.main__buttons--reset:hover {
+  background-color: lightgray;
+}
