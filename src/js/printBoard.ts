@@ -18,14 +18,15 @@ export const printBoard = (board) => {
     canvasBoard.append(tokenRow);
     for (let y = 0; y < board[x].length; y++) {
       const boardToken = document.createElement("div");
+      boardToken.setAttribute("class", "row-" + x + "-col-" + y);
       tokenRow.append(boardToken);
       if (board[x][y] === 0) {
-        boardToken.setAttribute("class", "dead");
+        boardToken.classList.add("dead");
         boardToken.style.backgroundColor = "white";
       }
 
       if (board[x][y] === 1) {
-        boardToken.setAttribute("class", "alive");
+        boardToken.classList.add("alive");
         boardToken.style.backgroundColor = "black";
       }
     }
