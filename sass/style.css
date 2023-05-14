@@ -162,19 +162,23 @@ body {
 }
 
 .main__board {
-  display: inline-grid;
   width: 75%;
-  grid-template-columns: repeat(20, 1fr);
+  margin: 0 auto;
 }
-.main__board div {
-  font-size: 0.75rem;
-  border: 2px solid black;
+.main__board .row {
+  display: flex;
+  justify-content: center;
 }
-.main__board .alive {
+.main__board .row div {
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+}
+.main__board .row .alive {
   color: black;
   background-color: black;
 }
-.main__board .dead {
+.main__board .row .dead {
   color: white;
   background-color: white;
 }
@@ -193,7 +197,8 @@ body {
 .main__buttons--start:hover,
 .main__buttons--stop:hover,
 .main__buttons--reset:hover {
-  background-color: lightgray;
+  background-color: black;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

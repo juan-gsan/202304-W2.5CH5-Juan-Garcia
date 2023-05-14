@@ -1,41 +1,35 @@
 export const printBoard = (board) => {
-  let consoleOutput = "";
+  // Const consoleOutput = "";
 
-  for (let x = 0; x < board.length; x++) {
-    consoleOutput = board[x];
-    consoleOutput = board[x].join(" ");
-    consoleOutput += "\n";
-
-    console.log(consoleOutput);
-  }
-  // For (let y = 0; y < randomBoard.length; y++) {
-  //   consoleOutput = randomBoard[y].join(" ");
+  // For (let x = 0; x < board.length; x++) {
+  //   consoleOutput = board[x];
+  //   consoleOutput = board[x].join(" ");
   //   consoleOutput += "\n";
+
   //   console.log(consoleOutput);
   // }
 
-  // const canvasBoard = document.querySelector(".main__board");
+  const canvasBoard = document.querySelector(".main__board") as Element;
 
-  // for (let y = 0; y < board.length; y++) {
-  //   for (let x = 0; x < board[y].length; x++) {
-  //     const boardToken = document.createElement("div");
-  //     canvasBoard?.append(boardToken);
+  for (let x = 0; x < board.length; x++) {
+    const tokenRow = document.createElement("div");
+    tokenRow.setAttribute("class", "row");
+    tokenRow.classList.add("row-" + x);
+    canvasBoard.append(tokenRow);
+    for (let y = 0; y < board[x].length; y++) {
+      const boardToken = document.createElement("div");
+      tokenRow.append(boardToken);
+      if (board[x][y] === 0) {
+        boardToken.setAttribute("class", "dead");
+        boardToken.style.backgroundColor = "white";
+      }
 
-  //     if (board[y][x] === 0) {
-  //       boardToken.setAttribute("class", "dead");
-  //       boardToken.textContent = "X";
-  //     }
+      if (board[x][y] === 1) {
+        boardToken.setAttribute("class", "alive");
+        boardToken.style.backgroundColor = "black";
+      }
+    }
+  }
 
-  //     if (board[y][x] === 1) {
-  //       boardToken.setAttribute("class", "alive");
-  //       boardToken.textContent = "O";
-  //     }
-
-  //     boardToken.classList.add(y + "-" + x);
-  //   }
-  // }
-
-  // return canvasBoard;
-
-  return consoleOutput;
+  return canvasBoard;
 };

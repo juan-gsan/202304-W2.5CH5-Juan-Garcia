@@ -19,21 +19,24 @@
 }
 
 .main__board {
-  display: inline-grid;
   width: 75%;
-  grid-template-columns: repeat(20, 1fr);
-  div {
-    font-size: 0.75rem;
-    border: 2px solid black;
-  }
-  .alive {
-    color: black;
-    background-color: black;
-  }
-
-  .dead {
-    color: white;
-    background-color: white;
+  margin: 0 auto;
+  .row {
+    display: flex;
+    justify-content: center;
+    div {
+      border: 1px solid black;
+      width: 20px;
+      height: 20px;
+    }
+    .alive {
+      color: black;
+      background-color: black;
+    }
+    .dead {
+      color: white;
+      background-color: white;
+    }
   }
 }
 
@@ -51,5 +54,6 @@
 .main__buttons--start:hover,
 .main__buttons--stop:hover,
 .main__buttons--reset:hover {
-  background-color: lightgray;
+  background-color: black;
+  color: white;
 }
