@@ -1,9 +1,12 @@
-export const createInitialBoard = (rows: number) => {
+export const createInitialBoard = (rows: number, columns: number) => {
   const initialBoard = [];
-  const row: number[] = [];
 
-  for (let index: number = 0; index < rows; index++) {
-    row.push(0);
+  for (let x: number = 0; x < rows; x++) {
+    const row: number[] = [];
+    for (let y = 0; y < columns; y++) {
+      row.push(0);
+    }
+
     initialBoard.push(row);
   }
 
