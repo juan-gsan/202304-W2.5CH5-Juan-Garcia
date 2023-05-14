@@ -1,14 +1,4 @@
 export const printBoard = (board) => {
-  // Const consoleOutput = "";
-
-  // For (let x = 0; x < board.length; x++) {
-  //   consoleOutput = board[x];
-  //   consoleOutput = board[x].join(" ");
-  //   consoleOutput += "\n";
-
-  //   console.log(consoleOutput);
-  // }
-
   const canvasBoard = document.querySelector(".main__board") as Element;
 
   for (let x = 0; x < board.length; x++) {
