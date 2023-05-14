@@ -1,4 +1,4 @@
-export const printBoard = (board) => {
+export const printBoard = (board: number[][]) => {
   const canvasBoard = document.querySelector(".main__board") as Element;
 
   for (let x = 0; x < board.length; x++) {

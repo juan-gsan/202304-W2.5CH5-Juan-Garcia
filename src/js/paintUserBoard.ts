@@ -1,4 +1,4 @@
-export const paintUserBoard = (board) => {
+export const paintUserBoard = (board: number[][]) => {
   for (let x = 0; x < board.length; x++) {
     for (let y = 0; y < board[x].length; y++) {
       const tokenButton = document.querySelector(

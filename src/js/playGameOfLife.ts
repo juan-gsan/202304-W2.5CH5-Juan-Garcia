@@ -1,4 +1,7 @@
-export const playGameOfLife = (board, aliveNeighbors) => {
+export const playGameOfLife = (
+  board: number[][],
+  aliveNeighbors: number[][]
+) => {
   for (let x = 0; x < board.length; x++) {
     for (let y = 0; y < board[x].length; y++) {
       const checkedToken = document.querySelector(
