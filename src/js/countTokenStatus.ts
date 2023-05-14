@@ -1,5 +1,5 @@
 /* eslint-disable complexity */
-export const countTokenStatus = (board) => {
+export const countTokenStatus = (board: number[][]) => {
   const aliveTokensBoard = [];
 
   for (let x = 0; x < board.length; x++) {
