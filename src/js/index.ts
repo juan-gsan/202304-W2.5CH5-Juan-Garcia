@@ -3,15 +3,16 @@ import { countTokenStatus } from "./countTokenStatus.js";
 import { printBoard } from "./printBoard.js";
 import { playGameOfLife } from "./playGameOfLife.js";
 
-const randomBoard = createRandomBoard(5, 5);
+const randomBoard = createRandomBoard(10, 10);
+printBoard(randomBoard);
 
 const timer = () => {
   setInterval(() => {
     console.clear();
-    printBoard(randomBoard);
     const aliveNeighbors = countTokenStatus(randomBoard);
     playGameOfLife(randomBoard, aliveNeighbors);
-  }, 1000);
+    printBoard(randomBoard);
+  }, 500);
 };
 
 timer();

@@ -1,16 +1,16 @@
 export const playGameOfLife = (board, aliveTokens) => {
-  for (let y = 0; y < board.length; y++) {
-    for (let x = 0; x < board[y].length; x++) {
-      if (board[y][x] === 1 && aliveTokens < 2) {
-        board[y][x] = 0;
+  for (let x = 0; x < board.length; x++) {
+    for (let y = 0; y < board[x].length; y++) {
+      if (board[x][y] === 1 && aliveTokens[x][y] < 2) {
+        board[x][y] = 0;
       }
 
-      if (board[y][x] === 1 && aliveTokens > 3) {
-        board[y][x] = 0;
+      if (board[x][y] === 1 && aliveTokens[x][y] > 3) {
+        board[x][y] = 0;
       }
 
-      if (board[y][x] === 0 && aliveTokens === 3) {
-        board[y][x] = 1;
+      if (board[x][y] === 0 && aliveTokens[x][y] === 3) {
+        board[x][y] = 1;
       }
     }
   }
