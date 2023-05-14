@@ -1,41 +1,26 @@
 export const printBoard = (board) => {
-  let consoleOutput = "";
+  const canvasBoard = document.querySelector(".main__board") as Element;
 
   for (let x = 0; x < board.length; x++) {
-    consoleOutput = board[x];
-    consoleOutput = board[x].join(" ");
-    consoleOutput += "\n";
+    const tokenRow = document.createElement("div");
+    tokenRow.setAttribute("class", "row");
+    tokenRow.classList.add("row-" + x);
+    canvasBoard.append(tokenRow);
+    for (let y = 0; y < board[x].length; y++) {
+      const boardToken = document.createElement("div");
+      boardToken.setAttribute("class", "row-" + x + "-col-" + y);
+      tokenRow.append(boardToken);
+      if (board[x][y] === 0) {
+        boardToken.classList.add("dead");
+        boardToken.style.backgroundColor = "white";
+      }
 
-    console.log(consoleOutput);
+      if (board[x][y] === 1) {
+        boardToken.classList.add("alive");
+        boardToken.style.backgroundColor = "black";
+      }
+    }
   }
-  // For (let y = 0; y < randomBoard.length; y++) {
-  //   consoleOutput = randomBoard[y].join(" ");
-  //   consoleOutput += "\n";
-  //   console.log(consoleOutput);
-  // }
 
-  // const canvasBoard = document.querySelector(".main__board");
-
-  // for (let y = 0; y < board.length; y++) {
-  //   for (let x = 0; x < board[y].length; x++) {
-  //     const boardToken = document.createElement("div");
-  //     canvasBoard?.append(boardToken);
-
-  //     if (board[y][x] === 0) {
-  //       boardToken.setAttribute("class", "dead");
-  //       boardToken.textContent = "X";
-  //     }
-
-  //     if (board[y][x] === 1) {
-  //       boardToken.setAttribute("class", "alive");
-  //       boardToken.textContent = "O";
-  //     }
-
-  //     boardToken.classList.add(y + "-" + x);
-  //   }
-  // }
-
-  // return canvasBoard;
-
-  return consoleOutput;
+  return canvasBoard;
 };

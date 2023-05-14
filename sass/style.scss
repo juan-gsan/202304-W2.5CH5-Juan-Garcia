@@ -19,37 +19,44 @@
 }
 
 .main__board {
-  display: inline-grid;
   width: 75%;
-  grid-template-columns: repeat(20, 1fr);
-  div {
-    font-size: 0.75rem;
-    border: 2px solid black;
-  }
-  .alive {
-    color: black;
-    background-color: black;
-  }
-
-  .dead {
-    color: white;
-    background-color: white;
+  margin: 0 auto;
+  .row {
+    display: flex;
+    justify-content: center;
+    div {
+      border: 1.5px solid black;
+      width: 20px;
+      height: 20px;
+    }
+    .alive {
+      color: black;
+      background-color: black;
+    }
+    .dead {
+      color: white;
+      background-color: white;
+    }
   }
 }
 
 .main__buttons--start,
 .main__buttons--stop,
-.main__buttons--reset {
+.main__buttons--reset,
+.main__buttons--random {
   background-color: white;
-  border: 2px solid lightgray;
-  margin: 2rem;
+  border: 1.5px solid black;
+  margin: 2rem 0.7rem 0.7rem 0.7rem;
   width: 5rem;
   height: 2rem;
   padding: 0.5rem;
+  font-weight: bold;
 }
 
 .main__buttons--start:hover,
 .main__buttons--stop:hover,
-.main__buttons--reset:hover {
-  background-color: lightgray;
+.main__buttons--reset:hover,
+.main__buttons--random:hover {
+  background-color: black;
+  color: white;
 }
