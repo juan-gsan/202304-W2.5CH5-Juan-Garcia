@@ -16,25 +16,23 @@ randomButton?.addEventListener("click", () => {
   const randomBoard = createRandomBoard(20, 20);
   paintBoard(randomBoard);
 
-  if (initialBoard) {
-    const playButton = document.querySelector(".main__buttons--start");
-    playButton?.addEventListener("click", () => {
-      const timer = () => {
-        const count = setInterval(() => {
-          const aliveNeighbors = countTokenStatus(randomBoard);
-          playGameOfLife(randomBoard, aliveNeighbors);
-          paintBoard(randomBoard);
-        }, 500);
+  const playButton = document.querySelector(".main__buttons--start");
+  playButton?.addEventListener("click", () => {
+    const timer = () => {
+      const count = setInterval(() => {
+        const aliveNeighbors = countTokenStatus(randomBoard);
+        playGameOfLife(randomBoard, aliveNeighbors);
+        paintBoard(randomBoard);
+      }, 500);
 
-        const stopButton = document.querySelector(".main__buttons--stop");
-        stopButton?.addEventListener("click", () => {
-          clearInterval(count);
-        });
-      };
+      const stopButton = document.querySelector(".main__buttons--stop");
+      stopButton?.addEventListener("click", () => {
+        clearInterval(count);
+      });
+    };
 
-      timer();
-    });
-  }
+    timer();
+  });
 });
 const resetButton = document.querySelector(".main__buttons--reset");
 
