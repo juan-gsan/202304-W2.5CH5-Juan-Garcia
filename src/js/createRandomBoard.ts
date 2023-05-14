@@ -1,9 +1,9 @@
 export const createRandomBoard = (rows: number, columns: number) => {
   const randomBoard = [];
 
-  for (let y = 0; y < rows; y++) {
+  for (let x = 0; x < rows; x++) {
     const row = [];
-    for (let x = 0; x < columns; x++) {
+    for (let y = 0; y < columns; y++) {
       row.push(Math.round(Math.random()));
     }
 

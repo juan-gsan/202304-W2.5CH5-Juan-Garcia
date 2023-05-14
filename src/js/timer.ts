@@ -1,7 +1,6 @@
-import { playGameOfLife } from "./playGameOfLife.js";
-
-export const timer = () => {
+export const timer = (board) => {
   setTimeout(() => {
-    playGameOfLife();
+    console.clear();
+    console.log(board);
   }, 1000);
 };

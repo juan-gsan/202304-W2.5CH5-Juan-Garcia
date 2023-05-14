@@ -1,18 +1,18 @@
-import { countTokenStatus } from "./countTokenStatus.js";
-import { playFirstRound } from "./playFirstRound.js";
-
-export const playGameOfLife = (board = playFirstRound()) => {
-  const aliveNeighbors = countTokenStatus(board);
-
+export const playGameOfLife = (board, aliveTokens) => {
   for (let y = 0; y < board.length; y++) {
-    for (let x = 0; x < board[y].length; x++) {}
-  }
+    for (let x = 0; x < board[y].length; x++) {
+      if (board[y][x] === 1 && aliveTokens < 2) {
+        board[y][x] = 0;
+      }
 
-  let consoleOutput = "";
-  for (let y = 0; y < board.length; y++) {
-    consoleOutput = board[y].join(" ");
-    consoleOutput += "\n";
-    console.log(consoleOutput);
+      if (board[y][x] === 1 && aliveTokens > 3) {
+        board[y][x] = 0;
+      }
+
+      if (board[y][x] === 0 && aliveTokens === 3) {
+        board[y][x] = 1;
+      }
+    }
   }
 
   return board;
