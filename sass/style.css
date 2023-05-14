@@ -163,14 +163,20 @@ body {
 
 .main__board {
   display: inline-grid;
-  width: 35%;
-  grid-template-columns: repeat(3, 1fr);
-  border: 4px solid lightgray;
-  border-radius: 10px;
-  padding: 0.2rem;
+  width: 75%;
+  grid-template-columns: repeat(20, 1fr);
 }
 .main__board div {
-  font-size: 2rem;
+  font-size: 0.75rem;
+  border: 2px solid black;
+}
+.main__board .alive {
+  color: black;
+  background-color: black;
+}
+.main__board .dead {
+  color: white;
+  background-color: white;
 }
 
 .main__buttons--start,

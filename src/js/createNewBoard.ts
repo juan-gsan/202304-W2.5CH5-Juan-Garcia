@@ -6,8 +6,5 @@ export const createNewBoard = (rows: number) => {
     newBoard.push(row);
   }
 
-  console.log(newBoard);
   return newBoard;
 };
-
-createNewBoard(5);

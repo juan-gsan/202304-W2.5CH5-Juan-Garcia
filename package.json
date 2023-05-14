@@ -8,7 +8,7 @@
     "build": "tsc --watch",
     "test": "jest --watchAll --coverage",
     "test:prod": "jest --watchAll --coverage --watchAll=false",
-    "sass": "sass ./dist/sass/style.scss:./dist/sass/style.css -w",
+    "sass": "sass ./sass/style.scss:./sass/style.css -w",
     "prepare": "husky install"
   },
   "keywords": [],

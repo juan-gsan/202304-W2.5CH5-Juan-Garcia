@@ -3,7 +3,7 @@ import { createRandomBoard } from "./createRandomBoard.js";
 export const printBoard = () => {
   // Let consoleOutput = "";
 
-  const randomBoard = createRandomBoard(3, 3);
+  const randomBoard = createRandomBoard();
 
   // For (let y = 0; y < randomBoard.length; y++) {
   //   consoleOutput = randomBoard[y].join(" ");
